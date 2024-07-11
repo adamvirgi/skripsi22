@@ -46,7 +46,11 @@ def main():
     st.write('Gender:', 'Male' if input_data[3] == 1 else 'Female')
 
     # Predicting the class label
-    prediction = predict_class(input_data) # Include all features for prediction
+    prediction = predict_class(input_data)  # Include all features for prediction
+
+    # Debugging statements
+    st.write('Input Data:', input_data)
+    st.write('Prediction:', prediction)
 
     # Mapping prediction to result category
     if prediction == 1:
@@ -57,9 +61,8 @@ def main():
         result = 'Risiko Gizi Lebih'
     elif prediction == 4:
         result = 'Gizi Lebih'
+    else:
+        result = 'Obesitas' 
 
     # Display the prediction result
     st.success(f"Nutritional Status Prediction: {result}")
-
-if __name__ == '__main__':
-    main()
