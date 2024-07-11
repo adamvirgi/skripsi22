@@ -57,8 +57,6 @@ def main():
         result = 'Risiko Gizi Lebih'
     elif prediction == 4:
         result = 'Gizi Lebih'
-    else:
-        result = 'Obesitas'
 
     # Display the prediction result
     st.success(f"Nutritional Status Prediction: {result}")
